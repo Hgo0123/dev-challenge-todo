@@ -71,7 +71,7 @@ function App() {
         <Choice handleFilter={handleFilter} filter={filter}/>
         <List todo={newList} toggleActive={toggleActive} handleDelete={handleDelete} filter={filter}/>
         <div className="condi">
-        {eval(filter) || filter === null ?  <Input addTodo={addTodo}/> : <DeleteAll handleDeleteAll={handleDeleteAll}/>}
+        {eval(filter) || filter === null || filter === '' ?  <Input addTodo={addTodo}/> : <DeleteAll handleDeleteAll={handleDeleteAll}/>}
         </div>
     </div>
   );
